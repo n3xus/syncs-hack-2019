@@ -9,6 +9,7 @@ import { WelcomeComponent } from './home/welcome.component';
 import { ProductModule } from './products/product.module';
 import { ListingsComponent } from './listings/listings.component';
 import { DetailComponent } from './detail/detail.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 // import {NgbButtonsModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { DetailComponent } from './detail/detail.component';
       {path: '**', redirectTo: 'welcome', pathMatch: 'full'}
     ]),
     ProductModule,
+    NgbModule,
   ],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: [AppComponent]
